@@ -31,3 +31,22 @@ Then to build this extension run:
 ```shell
 VCPKG_TOOLCHAIN_PATH=<path_to_your_vcpkg_toolchain> make
 ```
+
+## Example - Building on Ubuntu 22.04
+
+```shell
+# Checkout source and submodule
+git clone --recurse-submodules https://github.com/duckdb/duckdb_azure.git && cd duckdb_azure
+
+# Install vcpkg in root of azure_duckdb source path
+git clone https://github.com/Microsoft/vcpkg.git
+
+# Run the bootstrap script to build vcpkg
+vcpkg/bootstrap-vcpkg.sh
+
+# Install dependencies
+vcpkg/vcpkg install
+
+# Make
+VCPKG_TOOLCHAIN_PATH=$PWD/vcpkg/scripts/buildsystems/vcpkg.cmake make
+```
