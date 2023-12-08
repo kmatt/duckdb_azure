@@ -32,7 +32,7 @@ Then to build this extension run:
 VCPKG_TOOLCHAIN_PATH=<path_to_your_vcpkg_toolchain> make
 ```
 
-## Example - Building on Ubuntu 22.04
+### Example - Building on Linux (tested with Ubuntu 22.04)
 
 ```shell
 # Checkout source and submodule
